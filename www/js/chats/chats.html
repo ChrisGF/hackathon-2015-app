@@ -1,5 +1,21 @@
-<ion-view title="Chat">
+<ion-view title="Draw Request">
   <ion-content class="padding">
-    TODO : chats
+    <div class="container">
+      <h3>Submit a Draw Request</h3>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">How much do you need?</span>
+        <input type="text" placeholder="$" ng-model="form.user">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">What do you need it for?</span>
+        <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+      </label>
+
+      <h4>Upload an image of your last completed project.</h4>
+      <button class="button button-full button-energized" ng-click="addMedia()">Add image</button>
+      <form class="" action="index.html" method="post">
+        <button ng-click>Submit</button>
+      </form>
+    </div>
   </ion-content>
 </ion-view>
