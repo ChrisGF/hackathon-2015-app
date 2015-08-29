@@ -1,8 +1,12 @@
 <ion-view>
   <ion-header-bar class="bar-calm">
-    <div class="title">Login</div>
+    <div class="title">GroundFloor Borrower App</div>
   </ion-header-bar>
   <ion-content>
+    <div class="splashimg">
+    <div class="copy">
+      <h3>Welcome to the <br />GROUNDFLOOR Borrower app. <br />Login to apply for a loan, submit a draw request, or update your project.</h3>
+    </div>
     <form ng-submit="vm.login(vm.credentials)">
       <div class="list">
         <label class="item item-input item-stacked-label">
@@ -19,5 +23,6 @@
         <div class="card padding" ng-if="vm.error !== null">Error: {{vm.error}}</div>
       </div>
     </form>
+    </div>
   </ion-content>
 </ion-view>
