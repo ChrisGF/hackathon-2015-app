@@ -6,19 +6,19 @@
     <div class="container">
       <h3>Submit a Draw Request</h3>
       <p>Select property you wish to submit draw request for.</p>
-      <select name="singleSelect" ng-model="data.singleSelect">
+      <select name="singleSelect" ng-model="user.deal_id">
         <option value="">---Please select---</option> <!-- not selected / blank option -->
-        <option value="{{loans.address}}">434 Lantern Wood Dr.</option> <!-- interpolation -->
+        <option value= ng-repeat="{{user.address.deal_id}}">{{user.address}}</option> <!-- interpolation -->
         <option value="option-2">Option 2</option>
       </select><br>
       <form class="" action="index.html" method="post">
         <label class="item item-input item-floating-label">
         <span class="input-label">How much do you need?</span>
-        <input type="text" placeholder="$" ng-model="form.user">
+        <input type="text" placeholder="$" ng-model="request.amount">
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">What do you need it for?</span>
-        <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+        <input type="text" placeholder="Tell us about your project" ng-model="request.purpose">
       </label>
 
       <h4>Upload an image of your last completed project.</h4>

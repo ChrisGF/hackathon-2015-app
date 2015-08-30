@@ -6,7 +6,7 @@
   function configure($stateProvider){
     $stateProvider
       .state('app.tabs.update', {
-      url: '/notifs',
+      url: '/update',
       views: {
         'update-tab': {
           templateUrl: 'js/update/update.html',
