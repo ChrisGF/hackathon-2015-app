@@ -6,8 +6,15 @@
         <h2>Welcome {{vm.borrower.name}}</h2>
         <p>{{vm.borrower.email}}</p>
       </ion-item>
-      
-      <h2>{{vm.amount_borrowered}}</h2>
+      <div class="row cards">
+        <div class="col card">
+          <h2>{{vm.amount_borrowered}}</h2>
+        </div>
+        <div class="col card">
+          <h2>{{vm.interest_owed}}</h2>
+        </div>
+      </div>
     </div>
   </ion-content>
+  
 </ion-view>
