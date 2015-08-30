@@ -5,15 +5,19 @@
 
       <form class="" action="index.html" method="post">
         <label class="item item-input item-floating-label">
-        <span class="input-label">How much do you need?</span>
-        <input type="text" placeholder="$" ng-model="form.user">
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">What do you need it for?</span>
-        <input type="text" placeholder="Tell us about your project" ng-model="form.user">
-      </label>
+          <span class="input-label">Address<span>
+          <input type="text" placeholder="ex. 5 Piedmont" ng-model="form.user">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Purchase Price</span>
+          <input type="text" placeholder="$" ng-model="form.user">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">What do you need it for?</span>
+          <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+        </label>
 
-      <h4>Upload an image of your last completed project.</h4>
+      <h4>Upload an image of the property.</h4>
       <button class="button button-full button-energized" ng-click="addMedia()">Add image</button>
 
         <button ng-click>Submit</button>
