@@ -13,10 +13,26 @@
           <input type="text" placeholder="$" ng-model="form.user">
         </label>
         <label class="item item-input item-floating-label">
+          <span class="input-label">How much do you need?</span>
+          <input type="text" placeholder="$" ng-model="form.user">
+        </label>
+        <select name="singleSelect" ng-model="data.singleSelect">
+          <option value="">---Please select---</option> <!-- not selected / blank option -->
+          <option value="{{loans.address}}"></option> <!-- interpolation -->
+          <option value="{{loans.address}}"></option> <!-- interpolation -->
+        </select><br>
+        <label class="item item-input item-floating-label">
           <span class="input-label">What do you need it for?</span>
           <input type="text" placeholder="Tell us about your project" ng-model="form.user">
         </label>
-
+        <label class="item item-input item-floating-label">
+          <span class="input-label">What do you need it for?</span>
+          <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">What do you need it for?</span>
+          <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+        </label>
       <h4>Upload an image of the property.</h4>
       <button class="button button-full button-energized" ng-click="addMedia()">Add image</button>
 
