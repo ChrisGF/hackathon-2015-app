@@ -3,10 +3,13 @@
   angular.module('app')
     .factory('AuthSrv', AuthSrv)
     .factory('AuthInterceptor', AuthInterceptor);
+    
 
   AuthSrv.$inject = ['$http', 'UserSrv', 'StorageUtils', 'Config'];
   function AuthSrv($http, UserSrv, StorageUtils, Config){
+    var user = undefined;
     var service = {
+      user: user,
       login: login,
       logout: logout,
       isLogged: isLogged
@@ -22,7 +25,7 @@
         }
       }).then(function(res){
         console.log("User Logged In: " + res.data);
-        var user = res.data;
+        user = res.data;
         user.logged = true;
         return UserSrv.set(user).then(function(){
           return user;
