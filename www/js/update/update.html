@@ -14,24 +14,25 @@
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Title</span>
-          <input type="text" placeholder="Name your update" ng-model="vm.push.title">
+          <input type="text" placeholder="Name your update" ng-model="investor_updates.title">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Update details</span>
-          <input type="text" placeholder="What have you completed?" ng-model="vm.push.message">
+          <input type="text" placeholder="What have you completed?" ng-model="investor_updates.summary">
         </label>
+        <h3>Add your image</h3>
         <div class="padding">
           <button type="submit" class="button button-block button-calm">Send (android only !)</button>
         </div>
       </div>
     </form>
     <h3>My Submissions</h3>
-    <div class="list" ng-show="vm.notifications.length > 0">
-      <div class="item item-divider">Received notifications</div>
-      <div class="item" ng-repeat="notif in vm.notifications">
+    <div class="list" ng-show="investor_updates.length > 0">
+      <div class="item item-divider">Received Updates</div>
+      <div class="item" ng-repeat="investor_update in investor_updates">
         <small class="pull-right">{{notif.time | datetime}}</small>
-        <h2>{{notif.payload.title}}</h2>
-        <p>{{notif.payload.message}}</p>
+        <h2>{{investor_update.title}}</h2>
+        <p>{{investor_update.summary}}</p>
       </div>
     </div>
   </ion-content>
