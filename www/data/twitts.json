@@ -1,4 +1,4 @@
 [
-  {"id": "1", "user": "John Mangham",  "address": "1429 Allene Avenue", "amtfunded": "60,000", "term": "6mo", "rate": "8%", "avatar": "https://d9t2qaecuol2.cloudfront.net/images/106/2f35a62eb22b2c5d2395b5960534080aa0185211.jpg?1425060767",                                         "content": "Back off, man. I'm a scientist."  },
-  {"id": "1", "user": "John Mangham",  "address": "1429 Allene Avenue", "amtfunded": "60,000", "term": "6mo", "rate": "8%", "avatar": "https://d9t2qaecuol2.cloudfront.net/images/106/2f35a62eb22b2c5d2395b5960534080aa0185211.jpg?1425060767",                                         "content": "Back off, man. I'm a scientist."  }
+  {"id": "1", "user": "John Mangham",  "address": "1429 Allene Avenue", "amtfunded": "60,000", "term": "6mo", "rate": "8%", "avatar": "https://d9t2qaecuol2.cloudfront.net/images/106/2f35a62eb22b2c5d2395b5960534080aa0185211.jpg?1425060767" },
+  {"id": "1", "user": "John Mangham",  "address": "1429 Allene Avenue", "amtfunded": "60,000", "term": "6mo", "rate": "8%", "avatar": "https://d9t2qaecuol2.cloudfront.net/images/106/2f35a62eb22b2c5d2395b5960534080aa0185211.jpg?1425060767" }
 ]
