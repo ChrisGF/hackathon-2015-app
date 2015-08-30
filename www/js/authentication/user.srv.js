@@ -25,5 +25,9 @@
     function deleteCurrentUser(){
       return StorageUtils.clear(userKey);
     }
+    
+    function getFirstName(user) {
+      user.name.split(" ")[0];
+    }
   }
 })();
