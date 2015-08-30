@@ -8,9 +8,13 @@
     $scope.vm = vm;
     vm.borrower = StorageUtils.getSync(UserSrv.storageKey);
 
-    DashSrv.getAll();
+    //DashSrv.getAll();
     
-    vm.amount_borrowered = DashSrv.amountBorrowed;
+    DashSrv.getAmountBorrowed().then(function(amount_borrowered){
+      vm.amount_borrowered = amount_borrowered;
+    });
+    
+    //vm.amount_borrowered = DashSrv.getAmountBorrowed();
     console.log("Dash Controller Loaded: " + vm.amount_borrowered);
   }
     

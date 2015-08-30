@@ -11,7 +11,8 @@ var Config = (function(){
 
     //backendUrl: 'data', // 'http://myserver.com/api/v1',
 
-    backendUrl: 'http://localhost:3000', // 'http://myserver.com/api/v1',
+    //backendUrl: 'http://localhost:3000', // 'http://myserver.com/api/v1',
+    backendUrl: 'http://gf-hackathon.herokuapp.com', // 'http://myserver.com/api/v1',
 
     parse: {
       applicationId: '',
