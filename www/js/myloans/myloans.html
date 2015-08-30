@@ -1,4 +1,4 @@
-<ion-view title="Timeline">
+<ion-view title="My Loans">
   <ion-nav-buttons side="right">
     <button class="button button-icon ion-close-circled" ng-click="vm.listHideAll()" ng-show="vm.isListShowDelete || vm.isListShowReorder"></button>
     <button class="button button-icon ion-more" ng-click="vm.showOptions($event)"></button>
@@ -8,13 +8,12 @@
     <h1>My Loans</h1>
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.refresh()"></ion-refresher>
     <ion-list show-delete="vm.isListShowDelete" show-reorder="vm.isListShowReorder">
-      <ion-item class="item-avatar" ng-repeat="loan in vm.loans" item="loans" ui-sref="app.myloans({loanId: loan.id})" on-hold="vm.moreOptions(loan)">
-        <img ng-src="{{loan.avatar}}">
-        <h2>{{loan.user}}</h2>
-        <h3>{{loan.address}}</h3>
-        <p>{{loan.amtfunded}}</p>
-        <p>{{loan.term}}</p>
-        <p>{{loan.rate}}</p>
+      <ion-item class="item-avatar" ng-repeat="twitt in vm.twitts" item="twitt" ui-sref="app.tabs.twitt({twittId: twitt.id})" on-hold="vm.moreOptions(twitt)">
+        <img ng-src="{{twitt.avatar}}">
+        <h2>{{twitt.user}}</h2><h3>{{twitt.address}}</h3>
+        <p>{{twitt.amtfunded}}</p>
+        <p>{{twitt.term}}</p>
+        <p>{{twitt.rate}}</p>
         <ion-delete-button class="ion-minus-circled" ng-click="vm.listDelete(vm.twitts, twitt)"></ion-delete-button>
         <ion-option-button class="button-assertive" ng-click="vm.edit(twitt)">Edit</ion-option-button>
         <ion-option-button class="button-calm" ng-click="vm.share(twitt)">Share</ion-option-button>
@@ -23,4 +22,12 @@
     </ion-list>
     <ion-spinner class="hcenter voffset" ng-show="!vm.twitts"></ion-spinner>
   </ion-content>
-</ion-view>
+
+  <!-- <ion-footer-bar class="item-input-inset" ng-click="vm.writeTwitt()">
+    <label class="item-input-wrapper">
+      <i class="icon ion-chatbubbles placeholder-icon"></i>
+      <input type="text" placeholder="Say something">
+    </label>
+    <button class="button button-clear">Twitt</button>
+  </ion-footer-bar>
+</ion-view> -->
