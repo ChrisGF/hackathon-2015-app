@@ -14,10 +14,14 @@
     return service;
 
     function login(credentials){
-      return $http.get(Config.backendUrl+'/login', {
-        login: credentials.login,
-        password: credentials.password
+      console.log("Logging In: " + credentials.login);
+      return $http.post(Config.backendUrl+'/users/sign_in.json', {
+        user: {
+          email: credentials.login,
+          password: credentials.password
+        }
       }).then(function(res){
+        console.log("User Logged In: " + res.data);
         var user = res.data;
         user.logged = true;
         return UserSrv.set(user).then(function(){
@@ -27,7 +31,7 @@
     }
 
     function logout(){
-      return $http.get(Config.backendUrl+'/logout').then(function(){
+      return $http.delete(Config.backendUrl+'/users/sign_out.json').then(function(){
         return UserSrv.get().then(function(user){
           user.logged = false;
           return UserSrv.set(user);
