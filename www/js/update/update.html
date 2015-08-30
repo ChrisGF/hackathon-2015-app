@@ -1,4 +1,7 @@
-<ion-view title="Bugga">
+<ion-view title="Add an Update">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon ion-ios-bell-outline" ng-click="vm.showOptions($event)"></button>
+  </ion-nav-buttons>
   <ion-content>
     <h3>Submit Update</h3>
     <form ng-submit="vm.sendPush(vm.push)">
