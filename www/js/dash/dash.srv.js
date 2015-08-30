@@ -9,7 +9,6 @@
     var amountBorrowed = 0;
 
     var service = {
-      amountBorrowed: amountBorrowed,
       getAll: getAll,
       getAmountBorrowed: getAmountBorrowed
     };
@@ -22,6 +21,7 @@
     function getAmountBorrowed() {
       return $http.get(Config.backendUrl+'/dashboard/amount_borrowed.json').then(function(res){
         amountBorrowed = res.data.amount_borrowed;
+        return angular.copy(amountBorrowed);
       });
     }
   }
