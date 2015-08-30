@@ -1,4 +1,4 @@
-<ion-view title="Welcome {{vm.borrower.name}}" class="dashboard">
+<ion-view title="Welcome {{vm.borrower.email}}" class="dashboard">
   <ion-nav-buttons side="right">
     <button class="button button-icon ion-ios-bell-outline" ng-click="vm.showOptions($event)"></button>
   </ion-nav-buttons>
@@ -10,8 +10,8 @@
         <h2>Welcome {{vm.borrower.name}}</h2>
         <p>{{vm.borrower.email}}</p>
       </ion-item>
-      
-      <h2>{{vm.amount_borrowered}}</h2>
+
+      <h2>{{vm.amount_borrowed}}</h2>
     </div>
   </ion-content>
 </ion-view>

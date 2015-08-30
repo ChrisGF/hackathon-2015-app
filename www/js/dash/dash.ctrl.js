@@ -9,9 +9,9 @@
     vm.borrower = StorageUtils.getSync(UserSrv.storageKey);
 
     DashSrv.getAll();
-    
+
     vm.amount_borrowered = DashSrv.amountBorrowed;
-    console.log("Dash Controller Loaded: " + vm.amount_borrowered);
+    console.log("Dash Controller Loaded: " + vm.amount_borrowed);
   }
-    
+
 })();
