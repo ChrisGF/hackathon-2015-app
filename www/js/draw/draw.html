@@ -1,28 +1,46 @@
-<ion-view title="Draw Request">
+<ion-view title="Draw Request" class="draw">
   <ion-content class="padding">
     <div class="container">
-      <h3>Submit a Draw Request</h3>
-      <p>Select property you wish to submit draw request for.</p>
-      <select name="singleSelect" ng-model="data.singleSelect">
-        <option value="">---Please select---</option> <!-- not selected / blank option -->
-        <option value="{{loans.address}}">434 Lantern Wood Dr.</option> <!-- interpolation -->
-        <option value="option-2">Option 2</option>
-      </select><br>
-      <form class="" action="index.html" method="post">
-        <label class="item item-input item-floating-label">
-        <span class="input-label">How much do you need?</span>
-        <input type="text" placeholder="$" ng-model="form.user">
+      <div class="form-header">
+        <p>Fill out the form below to submit your a new draw request.</p>
+      </div>
+      
+      <label class="padded green">
+        <i class="fa fa-check"></i>
+        Select One Of Your Loans
       </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">What do you need it for?</span>
-        <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+      <label class="item item-input">
+        <input type="text" placeholder="ex. 5 Piedmont" ng-model="vm.deal.address">
       </label>
-
-      <h4>Upload an image of your last completed project.</h4>
-      <button class="button button-full button-energized" ng-click="addMedia()">Add image</button>
-
-        <button ng-click>Submit</button>
-      </form>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        How much do you need?
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="$" value="{{vm.deal.amount | currency}}">
+      </label>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        What do you need it for?
+      </label>
+      <label class="item item-input">
+        <textarea>I need the money to start the re-model of the bathroom</textarea>
+      </label>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        Attach an image of the property.
+      </label>
+      <div class="img-container">
+        <img src="https://atdc-hackathon.s3.amazonaws.com/sample3.jpg" class"ion-android-image">
+      </div>
     </div>
   </ion-content>
+  <ion-footer-bar class="item-input-inset" ng-click="vm.writeTwitt()">
+    <button class="button button-clear">
+      <i class="fa fa-plus"></i>Submit
+    </button>
+  </ion-footer-bar>
 </ion-view>
