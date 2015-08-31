@@ -1,42 +1,41 @@
-<ion-view title="Apply">
+<ion-view title="Apply For Credit" class="apply">
   <ion-content class="padding">
     <div class="container">
-      <h1>Apply for a new loan!</h1>
-
+      <div class="form-header">
+        <p>Fill out the form below to apply for a new loan.</p>
+      </div>
       <form class="" action="index.html" method="post">
-        <label class="item item-input item-floating-label">
-          <span class="input-label">Address<span>
-          <input type="text" placeholder="ex. 5 Piedmont" ng-model="form.user">
+        <label class="padded green">
+          <i class="fa fa-check"></i>
+          Address
         </label>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">Purchase Price</span>
-          <input type="text" placeholder="$" ng-model="form.user">
+        <label class="item item-input">
+          <input type="text" placeholder="ex. 5 Piedmont" ng-model="vm.deal.address">
         </label>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">How much do you need?</span>
-          <input type="text" placeholder="$" ng-model="form.user">
+        <br/>
+        <label class="padded">
+          <i class="fa fa-check"></i>
+          How much do you need?
         </label>
-        <select name="singleSelect" ng-model="data.singleSelect">
-          <option value="">---Please select---</option> <!-- not selected / blank option -->
-          <option value="{{loans.address}}"></option> <!-- interpolation -->
-          <option value="{{loans.address}}"></option> <!-- interpolation -->
-        </select><br>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">What do you need it for?</span>
-          <input type="text" placeholder="Tell us about your project" ng-model="form.user">
+        <label class="item item-input">
+          <input type="text" placeholder="$" value="{{vm.deal.amount | currency}}">
         </label>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">What do you need it for?</span>
-          <input type="text" placeholder="Tell us about your project" ng-model="form.user">
-        </label>
-        <label class="item item-input item-floating-label">
-          <span class="input-label">What do you need it for?</span>
-          <input type="text" placeholder="Tell us about your project" ng-model="form.user">
-        </label>
-      <h4>Upload an image of the property.</h4>
-      <button class="button button-full button-energized" ng-click="addMedia()">Add image</button>
-
-        <button ng-click>Submit</button>
+      </form>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        Attach an image of the property.
+      </label>
+      <div class="img-container">
+        <img ng-src="{{vm.deal.photo}}" class"ion-android-image">
+      </div>
+      <button class="button" ng-click="addMedia()">Upload A New Image</button>
     </div>
   </ion-content>
+  <ion-footer-bar class="item-input-inset" ng-click="vm.writeTwitt()">
+    <button class="button button-clear">
+      <i class="fa fa-plus"></i>Apply For Credit
+    </button>
+  </ion-footer-bar>
+  
 </ion-view>
