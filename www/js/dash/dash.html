@@ -10,8 +10,19 @@
         <h2>Welcome {{vm.borrower.name}}</h2>
         <p>{{vm.borrower.email}}</p>
       </ion-item>
+      <h3>Your Current Loans</h3>
+      <div class="row card">
+        <div class="col-45">
+          <strong>{{vm.amount_borrowered.address}}</strong><br />
+          funded date: <strong>{{vm.amount_borrowered.funded_date}}</strong>
+        </div>
+          <div class="col-45">
+            Interest accrued:<br />
+            Days remaining:
+          </div>
+        </div>
+      </div>
 
-      <h2>{{vm.amount_borrowed}}</h2>
-    </div>
   </ion-content>
+
 </ion-view>
