@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-view title="Draw Request">
   <ion-nav-buttons side="right">
     <button class="button button-icon ion-ios-bell-outline" ng-click="vm.showOptions($event)"></button>
@@ -20,12 +21,35 @@
         <span class="input-label">What do you need it for?</span>
         <input type="text" placeholder="Tell us about your project" ng-model="request.purpose">
       </label>
-
-      <h4>Upload an image of your last completed project.</h4>
-      <button class="button button-full button-energized" ng-click="addMedia()">Add image</button>
-
-        <button ng-click>Submit</button>
-      </form>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        How much do you need?
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="$" value="{{vm.deal.amount | currency}}">
+      </label>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        What do you need it for?
+      </label>
+      <label class="item item-input">
+        <textarea>I need the money to start the re-model of the bathroom</textarea>
+      </label>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        Attach an image of the property.
+      </label>
+      <div class="img-container">
+        <img src="https://atdc-hackathon.s3.amazonaws.com/sample3.jpg" class"ion-android-image">
+      </div>
     </div>
   </ion-content>
+  <ion-footer-bar class="item-input-inset" ng-click="vm.writeTwitt()">
+    <button class="button button-clear">
+      <i class="fa fa-plus"></i>Submit
+    </button>
+  </ion-footer-bar>
 </ion-view>
