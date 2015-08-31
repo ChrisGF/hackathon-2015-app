@@ -6,7 +6,7 @@ ion-view.dashboard {
 }
 
 ion-view.apply {
-  background-color: #eee;
+  xbackground-color: #eee;
   font-size: 16px;
   
   i.fa-check {
@@ -44,6 +44,7 @@ ion-view.apply {
     background-color: #313E46;
     text-align: center;
     i { 
+      padding-top: 3px;
       padding-right: 10px;
       font-size:18px;
     }
@@ -53,6 +54,7 @@ ion-view.apply {
       background-color: #ff4301;
       border-color: #ff4301;
       padding: 4px 10px;
+      font-weight: bold;
     }
     
   }
