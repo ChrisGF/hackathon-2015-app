@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-<ion-view title="Draw Request">
-  <ion-nav-buttons side="right">
-    <button class="button button-icon ion-ios-bell-outline" ng-click="vm.showOptions($event)"></button>
-  </ion-nav-buttons>
+<ion-view title="Draw Request" class="draw">
   <ion-content class="padding">
     <div class="container">
-      <h3>Submit a Draw Request</h3>
-      <p>Select property you wish to submit draw request for.</p>
-      <select name="singleSelect" ng-model="user.deal_id">
-        <option value="">---Please select---</option> <!-- not selected / blank option -->
-        <option value= ng-repeat="{{user.address.deal_id}}">{{user.address}}</option> <!-- interpolation -->
-        <option value="option-2">Option 2</option>
-      </select><br>
-      <form class="" action="index.html" method="post">
-        <label class="item item-input item-floating-label">
-        <span class="input-label">How much do you need?</span>
-        <input type="text" placeholder="$" ng-model="request.amount">
+      <div class="form-header">
+        <p>Fill out the form below to submit a new draw request.</p>
+      </div>
+
+      <label class="padded green">
+        <i class="fa fa-check"></i>
+        Select One Of Your Loans
       </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">What do you need it for?</span>
-        <input type="text" placeholder="Tell us about your project" ng-model="request.purpose">
+      <label class="item item-input">
+        <input type="text" placeholder="ex. 5 Piedmont" ng-model="vm.deal.address">
       </label>
       <br/>
       <label class="padded">
