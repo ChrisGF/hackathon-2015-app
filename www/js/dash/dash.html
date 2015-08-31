@@ -6,23 +6,24 @@
   <ion-content>
     <div class="container">
       <ion-item class="item-avatar" item="borrower">
+
         <img ng-src="{{vm.borrower.gravatar_url}}">
         <h2>Welcome {{vm.borrower.name}}</h2>
         <p>{{vm.borrower.email}}</p>
       </ion-item>
       <h3>Your Current Loans</h3>
+      <a ui-sref="app.tabs.dash-detail">
       <div class="row card">
         <div class="col-45">
-          <strong>{{vm.amount_borrowered.address}}</strong><br />
-          funded date: <strong>{{vm.amount_borrowered.funded_date}}</strong>
+          <strong>116 Pine Street Independence, KY 41051</strong><br />
+          Total:<strong>150,000 - Atlanta, Ga</strong>
         </div>
-          <div class="col-45">
-            Interest accrued:<br />
-            Days remaining:
+          <div class="col-55">
+            You owe <strong>$65,000</strong> in <strong>65 days</strong>
           </div>
         </div>
+        </a>
       </div>
 
   </ion-content>
-
 </ion-view>

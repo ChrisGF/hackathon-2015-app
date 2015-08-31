@@ -13,6 +13,15 @@
           controller: 'DashCtrl'
         }
       }
-    });
+    })
+    .state('app.tabs.dash-detail', {
+    url: '/dash/dash-detail',
+    views: {
+      'dash-tab': {
+        templateUrl: 'js/dash/dash-detail.html',
+        controller: 'DashCtrl'
+      }
+    }
+  });
   }
 })();
