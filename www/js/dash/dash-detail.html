@@ -1,13 +1,12 @@
 <ion-view title="Loan Details">
   <ion-content>
 
-    <div class="list">
-      <a class="item item-thumbnail-left">
-      <img ng-src="{{ vm.deal.photo }}">
-      <h2>{{ vm.deal.address }}</h2>
-      <h3>Amount Borrowed: {{ vm.deal.amount }}</h3>
-      <h5>You owe <strong>{{ vm.deal.amount }}</strong></h5>
-      <p>Your loan is due in <strong>50</strong> days</p>
-    </div>
+      <div class="item item-thumbnail-left">
+        <img ng-src="{{ vm.deal.photo }}">
+        <h2>{{ vm.deal.address }}</h2>
+        <h3>Amount Borrowed: <strong>$ {{ vm.deal.amount }}</strong></h3>
+        <h3>You owe <strong>${{ vm.deal.amount - 25600 }}</strong></h3>
+        <p>Your loan is due in <strong>53</strong> days</p>
+      </div>
   </ion-content>
 </ion-view>

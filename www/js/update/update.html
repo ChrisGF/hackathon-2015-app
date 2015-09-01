@@ -1,39 +1,47 @@
-<ion-view title="Add an Update">
-  <ion-nav-buttons side="right">
-    <button class="button button-icon ion-ios-bell-outline" ng-click="vm.showOptions($event)"></button>
-  </ion-nav-buttons>
-  <ion-content>
-    <h3>Submit Update</h3>
-    <form ng-submit="vm.sendPush(vm.push)">
-      <div class="list">
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Address</span>
-          <select type="select" ng-model="vm.push.title">
-          <option value="">Address from users loans</option>
-        </select>
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Title</span>
-          <input type="text" placeholder="Name your update" ng-model="investor_updates.title">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Update details</span>
-          <input type="text" placeholder="What have you completed?" ng-model="investor_updates.summary">
-        </label>
-        <h3>Add your image</h3>
-        <div class="padding">
-          <button type="submit" class="button button-block button-calm">Send (android only !)</button>
-        </div>
+<ion-view title="Add an Update" class="draw">
+  <ion-content class="padding">
+    <div class="container">
+      <div class="form-header">
+        <p>Fill out the form below to submit an update.</p>
       </div>
-    </form>
-    <h3>My Submissions</h3>
-    <div class="list" ng-show="investor_updates.length > 0">
-      <div class="item item-divider">Received Updates</div>
-      <div class="item" ng-repeat="investor_update in investor_updates">
-        <small class="pull-right">{{notif.time | datetime}}</small>
-        <h2>{{investor_update.title}}</h2>
-        <p>{{investor_update.summary}}</p>
+
+      <label class="padded green">
+        <i class="fa fa-check"></i>
+        Select One Of Your Loans
+      </label>
+      <select class="item item-input">
+        <option>------------------</option>
+        <option>886 Lincoln Street</option>
+      </select>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        Title your project
+      </label>
+      <label class="item item-input">
+        <input type="text" value="Roof Fix">
+      </label>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        Update Details
+      </label>
+      <label class="item item-input">
+        <textarea>I fixed the roof and repainted front of the house.</textarea>
+      </label>
+      <br/>
+      <label class="padded">
+        <i class="fa fa-check"></i>
+        Attach an image of the property.
+      </label>
+      <div class="img-container">
+        <img src="https://atdc-hackathon.s3.amazonaws.com/sample4.jpg" class"ion-android-image">
       </div>
     </div>
   </ion-content>
+  <ion-footer-bar class="item-input-inset" ng-click="vm.writeTwitt()">
+    <button class="button button-clear" ui-sref="app.tabs.dash">
+      <i class="fa fa-plus"></i>Submit
+    </button>
+  </ion-footer-bar>
 </ion-view>

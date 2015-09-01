@@ -6,24 +6,32 @@
   <ion-content>
     <div class="container">
       <ion-item class="item-avatar" item="borrower">
-
         <img ng-src="{{vm.borrower.gravatar_url}}">
         <h2>Welcome {{vm.borrower.name}}</h2>
         <p>{{vm.borrower.email}}</p>
       </ion-item>
-      <h3>Your Current Loans</h3>
-        <div class="list">
-          <li ng-repeat="x in vm ">
+        <h3>Your Current Loans</h3>
+        <div class="list list-inset">
+          <div class="item">
           <a ui-sref="app.tabs.dash-detail" class="item item-thumbnail-left">
-          <img ng-src="{{ x.photo }}">
-          <h2>{{ x.address }}</h2>
-          <h3>Amount Borrowed: {{ x.amount }}</h3>
-          <h5>You owe <strong>{{ x.amount }}</strong></h5>
-          <p>Your loan is due in <strong>50</strong> days</p>
+          <img ng-src="{{ vm.deal.photo }}">
+          <h2>{{ vm.deal.address }}</h2>
+          <h3>Amount Borrowed: <strong>$ {{ vm.deal.amount }}</strong></h3>
+          <h3>You owe <strong>${{ vm.deal.amount - 25600 }}</strong></h3>
+          <p>Your loan is due in <strong>53</strong> days</p>
           </a>
-        </li>
+        </div>
+        </div>
+        <div class="news h2">
+          GroundFloor News!
+        </div>
+        <div class="news">
+          <p>Thank you Georgia! In the last year and a half you loaned more than $2 million to borrowers across 42 projects so far. Our borrowers have repaid you more than $800,000 of principal and interest to date with an annualized yield of more than 12%, with no defaults.</p>
+
+          <p>We want you to be the first to know that what you helped create is expanding. For you, this means more loans than ever before in more places across the country. </p>
         </div>
       </div>
+      <div
 
   </ion-content>
 </ion-view>

@@ -28,7 +28,7 @@
         lat: sample_address.lat,
         long: sample_address.long,
         photo: sample_address.photo,
-        amount: (sampleAmounts[Math.floor(Math.random()*sampleAmounts.length)] * 1000)
+        amount: (85000)
       }
     }
 

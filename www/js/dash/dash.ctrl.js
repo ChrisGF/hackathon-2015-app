@@ -12,6 +12,7 @@
     vm.deal = DealSrv.sampleDeal();
 
 
+
     //DashSrv.getAll();
     activate();
 
