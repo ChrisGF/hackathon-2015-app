@@ -1,5 +1,70 @@
 <ion-view title="Loan Details">
   <ion-content>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="{{ vm.deal.photo }}">
+    <h2>{{ vm.deal.address }}</h2>
+    <p>Fund Date: March 1, 2015</p>
+  </div>
+
+  <div class="item item-body">
+    <div class="row">
+      <div class="card col-50 text-center">
+        <div class="item item-divider">
+          Amount Owed
+        </div>
+        <div class="item item-text-wrap">
+          $59,400.00
+        </div>
+      </div>
+      <div class="card col-50 text-center">
+        <div class="item item-divider">
+          Accrued Interest
+        </div>
+        <div class="item item-text-wrap">
+          $1,289.00
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card col-50 text-center">
+        <div class="item item-divider">
+          Repayment date
+        </div>
+        <div class="item item-text-wrap">
+          11/1/15
+        </div>
+      </div>
+      <div class="card col-50 text-center">
+        <div class="item item-divider">
+          Next Payment Due
+        </div>
+        <div class="item item-text-wrap">
+          <strong>9/1/15</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+    <img class="full-image" src="{{ vm.deal.photo }}">
+</div>
+</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<ion-view title="Loan Details">
+  <ion-content>
       <div class="item item-thumbnail-left">
         <img ng-src="{{ vm.deal.photo }}">
         <h2>{{ vm.deal.address }}</h2>
@@ -7,5 +72,5 @@
         <h3>You owe <strong>${{ vm.deal.amount - 25600 }}</strong></h3>
         <p>Your loan is due in <strong>53</strong> days</p>
       </div>
-  </ion-content>
-</ion-view>
+      <div class="card ">
+      </div> -->
