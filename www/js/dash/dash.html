@@ -12,17 +12,17 @@
         <p>{{vm.borrower.email}}</p>
       </ion-item>
       <h3>Your Current Loans</h3>
-      <a ui-sref="app.tabs.dash-detail">
-      <div class="row card">
-        <div class="col-45">
-          <strong>116 Pine Street Independence, KY 41051</strong><br />
-          Total:<strong>150,000 - Atlanta, Ga</strong>
+        <div class="list">
+          <a
+              ui-sref="app.tabs.dash-detail"
+             class="item item-thumbnail-left">
+          <img ng-src="{{ vm.deal.photo }}">
+          <h2>{{ vm.deal.address }}</h2>
+          <h3>Amount Borrowed: {{ vm.deal.amount }}</h3>
+          <h5>You owe <strong>{{ vm.deal.amount }}</strong></h5>
+          <p>Your loan is due in <strong>50</strong> days</p>
+          </a>
         </div>
-          <div class="col-55">
-            You owe <strong>$65,000</strong> in <strong>65 days</strong>
-          </div>
-        </div>
-        </a>
       </div>
 
   </ion-content>

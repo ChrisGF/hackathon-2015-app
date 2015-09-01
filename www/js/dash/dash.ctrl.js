@@ -3,12 +3,13 @@
   angular.module('app')
     .controller('DashCtrl', DashCtrl);
 
-  function DashCtrl($scope, $state, StorageUtils, UserSrv, DashSrv){
+  function DashCtrl($scope, $state, StorageUtils, UserSrv, DashSrv, DealSrv){
     var vm = {};
     $scope.vm = vm;
     vm.borrower = StorageUtils.getSync(UserSrv.storageKey);
     vm.amount_borrowered = undefined;
     vm.interest_owed = undefined;
+    vm.deal = DealSrv.sampleDeal();
 
     //DashSrv.getAll();
     activate();
