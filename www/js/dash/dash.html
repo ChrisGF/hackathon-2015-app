@@ -13,15 +13,15 @@
       </ion-item>
       <h3>Your Current Loans</h3>
         <div class="list">
-          <a
-              ui-sref="app.tabs.dash-detail"
-             class="item item-thumbnail-left">
-          <img ng-src="{{ vm.deal.photo }}">
-          <h2>{{ vm.deal.address }}</h2>
-          <h3>Amount Borrowed: {{ vm.deal.amount }}</h3>
-          <h5>You owe <strong>{{ vm.deal.amount }}</strong></h5>
+          <li ng-repeat="x in vm ">
+          <a ui-sref="app.tabs.dash-detail" class="item item-thumbnail-left">
+          <img ng-src="{{ x.photo }}">
+          <h2>{{ x.address }}</h2>
+          <h3>Amount Borrowed: {{ x.amount }}</h3>
+          <h5>You owe <strong>{{ x.amount }}</strong></h5>
           <p>Your loan is due in <strong>50</strong> days</p>
           </a>
+        </li>
         </div>
       </div>
 

@@ -7,7 +7,7 @@
   DealSrv.$inject = ['$http', '$q', '$timeout', 'Utils', 'Config', '_', 'StorageUtils'];
   function DealSrv($http, $q, $timeout, Utils, Config, _, StorageUtils){
     var deal = undefined;
-    var sampleAddresses = [ 
+    var sampleAddresses = [
       { address: "886 Lincoln Street Lake Worth, FL 33460", lat: "33.206374", long: "-96.948087", photo: "https://atdc-hackathon.s3.amazonaws.com/sample1.jpg"},
       { address: "457 Route 7 Lake Worth, FL 33460", lat: "26.623774", long: "-80.052702", photo: "https://atdc-hackathon.s3.amazonaws.com/sample2.jpg"},
       { address: "116 Pine Street Independence, KY 41051", lat: "38.952272", long: "-84.621935", photo: "https://atdc-hackathon.s3.amazonaws.com/sample5.jpg"},
@@ -20,9 +20,9 @@
       sampleDeal: sampleDeal
     };
     return service;
-    
+
     function sampleDeal() {
-      var sample_address = sampleAddresses[Math.floor(Math.random()*sampleAddresses.length)]
+      var sample_address = sampleAddresses[0]
       return {
         address: sample_address.address,
         lat: sample_address.lat,
@@ -31,7 +31,7 @@
         amount: (sampleAmounts[Math.floor(Math.random()*sampleAmounts.length)] * 1000)
       }
     }
-    
+
     function getDeal(id) {
       return $http.get(Config.backendUrl+'/deals/' + id + '.json').then(function(res){
         deal = res.data;

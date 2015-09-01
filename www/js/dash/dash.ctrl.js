@@ -11,6 +11,7 @@
     vm.interest_owed = undefined;
     vm.deal = DealSrv.sampleDeal();
 
+
     //DashSrv.getAll();
     activate();
 
